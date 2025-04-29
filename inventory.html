@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inventory Box</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .inventory-box {
+      background: white;
+      width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+
+    .inventory-header {
+      font-size: 20px;
+      font-weight: bold;
+      color: #4CAF50;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .inventory-item {
+      margin-bottom: 12px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    .inventory-item:last-child {
+      border-bottom: none;
+    }
+
+    .item-name {
+      font-weight: 600;
+      color: #333;
+    }
+
+    .item-details {
+      font-size: 14px;
+      color: #666;
+      margin-top: 4px;
+    }
+
+    .status {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 4px 10px;
+      font-size: 12px;
+      border-radius: 20px;
+      color: white;
+    }
+
+    .in-stock {
+      background-color: #4CAF50;
+    }
+
+    .low-stock {
+      background-color: #ff9800;
+    }
+
+    .out-of-stock {
+      background-color: #f44336;
+    }
+  </style>
+</head>
+<body>
+
+<div class="inventory-box">
+  <div class="inventory-header">Crop Inventory</div>
+
+  <div class="inventory-item">
+    <div class="item-name">Wheat</div>
+    <div class="item-details">Quantity: 120 kg | Price: $2/kg</div>
+    <div class="status in-stock">In Stock</div>
+  </div>
+
+  <div class="inventory-item">
+    <div class="item-name">Rice</div>
+    <div class="item-details">Quantity: 40 kg | Price: $2.5/kg</div>
+    <div class="status low-stock">Low Stock</div>
+  </div>
+
+  <div class="inventory-item">
+    <div class="item-name">Corn</div>
+    <div class="item-details">Quantity: 0 kg | Price: $1.8/kg</div>
+    <div class="status out-of-stock">Out of Stock</div>
+  </div>
+</div>
+
+</body>
+</html>

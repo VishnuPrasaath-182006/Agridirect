@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crop Order Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8f5;
+      padding: 40px;
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #2e7d32;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: #28a745;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Place Crop Order</h2>
+  <form action="#" method="POST">
+
+    <label for="cropType">Type of Crop</label>
+    <select id="cropType" name="cropType" required>
+      <option value="">-- Select Crop Type --</option>
+      <option value="Food Grain">Food Grain Crops</option>
+      <option value="Cash Crop">Cash Crops</option>
+      <option value="Plantation Crop">Plantation Crops</option>
+      <option value="Horticulture Crop">Horticulture Crops</option>
+    </select>
+
+    <label for="crop">Select Crop</label>
+    <select id="crop" name="crop" required>
+      <option value="">-- Select Crop --</option>
+      <option value="Wheat">Wheat</option>
+      <option value="Rice">Rice</option>
+      <option value="Maize">Maize</option>
+      <option value="Tea">Tea</option>
+      <option value="Coffee">Coffee</option>
+      <option value="Cotton">Cotton</option>
+      <option value="Sugarcane">Sugarcane</option>
+      <option value="Tomato">Tomato</option>
+      <option value="Onion">Onion</option>
+    </select>
+
+    <label for="quantity">Quantity</label>
+    <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" min="1" required>
+
+    <label for="unit">Unit</label>
+    <select id="unit" name="unit" required>
+      <option value="kg">Kilograms (kg)</option>
+      <option value="quintal">Quintals</option>
+      <option value="ton">Tons</option>
+    </select>
+
+    <label for="address">Delivery Address</label>
+    <textarea id="address" name="address" rows="4" placeholder="Enter your full delivery address" required></textarea>
+
+    <label for="phone">Contact Number</label>
+    <input type="tel" id="phone" name="phone" placeholder="e.g., 9876543210" required>
+
+    <button type="submit" class="btn btn-success w-100"><a href="thankyou2.html">Submit Form</a></button>
+
+<!-- Optional: Google Map Embed -->
+ <h5>Locate your exact address</h5>
+<div class="map-container mt-5">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.775128651068!2d73.927764!3d18.5474139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c11d650f3f5d%3A0xcaf17498b82d4d5a!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </div>
+
+</div>
+</section>
+
+</body>
+</html>
